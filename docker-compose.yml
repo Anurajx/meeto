@@ -1,0 +1,28 @@
+version: '3.8'
+
+# OPTIONAL: This docker-compose file is not needed if using Supabase
+# Supabase provides a hosted PostgreSQL database - no local setup required!
+# See SETUP_SUPABASE.md for Supabase setup instructions
+
+# If you still want to use a local PostgreSQL for development, uncomment below:
+# services:
+#   postgres:
+#     image: postgres:15-alpine
+#     container_name: meeting_secretary_db
+#     environment:
+#       POSTGRES_USER: postgres
+#       POSTGRES_PASSWORD: postgres
+#       POSTGRES_DB: meeting_secretary
+#     ports:
+#       - "5432:5432"
+#     volumes:
+#       - postgres_data:/var/lib/postgresql/data
+#     healthcheck:
+#       test: ["CMD-SHELL", "pg_isready -U postgres"]
+#       interval: 10s
+#       timeout: 5s
+#       retries: 5
+#
+# volumes:
+#   postgres_data:
+
